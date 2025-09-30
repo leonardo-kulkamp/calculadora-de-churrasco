@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 // Variável global.
 float totalArrecadado = 0;
 
@@ -34,6 +35,13 @@ int main(){
 
     printf("Digite o número de participantes: ");
     scanf("%d",&pessoas);
+
+    for (int i =1 ; i <= pessoas; i++){
+        printf("Digite a contribuição do participante %d: R$ ", i);
+        scanf("%f", &valor);
+        adicionaContribuicao(valor);
+
+    }
 
     mostraResumo(pessoas);
 
